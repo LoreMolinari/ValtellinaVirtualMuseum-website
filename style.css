@@ -1,0 +1,285 @@
+
+
+/* Stile */
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    background: whitesmoke;
+}
+
+.body-temi{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(img/bg/bg-grey.webp);
+    padding: 5%;
+}
+
+a{
+    text-decoration: none !important;
+}
+a:hover{
+    color: white !important;
+}
+h1, h2, h3, h4, h5, p{
+    color:#000;
+    padding-bottom: 30px;
+}
+p{
+    line-height: 28px;
+    color: #666;
+    font-weight: 300;
+}
+
+em {
+    font-style: italic;
+}
+
+.big-text{
+    font-size: 70px;
+    font-weight: 900;
+}
+.large-text{
+    font-size: 50px;
+    font-weight: 700;
+}
+.med-text{
+    font-size: 40px;
+}
+.normal-text{
+    font-size: 20px;
+}
+.small-text{
+    font-size: 14px;
+}
+.light-text{
+    font-size: 14px;
+    font-weight: 300;
+}
+.quotes{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button-colored, .button-transparent{
+    padding: 15px 25px;
+    display: inline-block;
+    border-radius: 15px;
+    color:#fff;
+}
+.button-colored{
+    background: rgba(118, 87, 255);
+}
+.button-transparent{
+    background: rgba(118, 87, 255, 0.342);
+}
+
+@media (max-width: 770px) {
+    .big-text{
+        font-size: 60px;
+    }
+    .large-text{
+        font-size: 40px;
+    }
+}
+
+/* Logo */
+.logo{
+    z-index: 1;
+    position: fixed;
+    padding: 10px;
+}
+.img-logo{
+    width: 60px;
+}
+
+/* ! Homepage */
+.home{
+    position: relative;
+    height: 100vh;
+    display: flex; width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bgvideo.jpg') no-repeat bottom bottom;
+    background-size: cover;
+    overflow: hidden;
+}
+  
+.home::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.75;
+}
+  
+#video-home{
+    position: absolute;
+    top: -20%;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+  
+.home-content{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    z-index: 1;
+    position: relative;
+}
+  
+.home-content h1, .home-content p{
+    color: #fff;
+}
+
+@media (max-width: 770px) {
+    #video-home{
+        bottom: 0;
+    }
+}
+
+/*Container Section*/
+#containerSection{
+    margin: 0 auto;
+    background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0, 1)), url('img/bg/bg-section.webp') no-repeat center center;
+    background-size: cover;
+    padding: 5%;
+}
+
+.section-left{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5%;
+}
+
+.section-right{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5%;
+}
+
+.card{
+    border-radius: 1rem !important;
+}
+
+.card-body{
+    padding: 1rem !important;
+}
+
+.card-image{
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-montagne.webp') no-repeat center center;
+    background-size: cover;
+    border-radius: 0.75rem;
+}
+
+.card-segale{
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-segale.webp') no-repeat bottom bottom;
+    background-size: cover;
+    border-radius: 0.75rem;
+}
+
+.card-lana{
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-lana.webp') no-repeat center center;
+    background-size: cover;
+    border-radius: 0.75rem;
+}
+
+.card-image .card-title{
+    color: white !important;
+}
+
+.card-image p{
+    color: #9f9f9fb8;
+}
+
+@media (max-width: 770px) {
+    .section-left{
+        margin-top: 10%;
+        justify-content: center;
+    }
+    .section-right{
+        margin-top: 10%;
+        justify-content: center;
+    }
+}
+
+/* Tematiche */
+.navbar-temi{
+    width: 75%;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.11);
+    color: white;
+    padding: auto;
+    background-image: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-segale.webp');
+    background-size: cover;
+    border-radius: 0.75rem;
+    background-position: center;
+}
+
+.container-fluid{
+    display: block !important;
+    text-align: center;
+}
+
+.video-temi{
+    width: 50% !important;
+    border-radius: 1rem;
+    margin: 5%;
+}
+
+.card-temi{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.card-temi .card{
+    display: flex;
+    flex-direction: row;
+    background: rgba(233, 233, 233, 0.808);
+    border: solid 1px;
+    padding: 2%;
+}
+
+.card-temi .col-md-4{
+    align-self: center;
+    padding: 1%;
+}
+
+
+@media (max-width: 770px) {
+    .card-temi{
+        width: 90%;
+    }
+
+    .video-temi{
+        width: 90% !important
+    }
+
+    .navbar-temi{
+        width: 90%;
+    }
+}
+
+/*Default*/
+.white-text{
+    color: white !important;
+}
+
+/*Padding per evitare problemi di sovrapposizione*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
