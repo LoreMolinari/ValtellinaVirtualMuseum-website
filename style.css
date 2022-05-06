@@ -4,14 +4,18 @@
 body{
     font-family: 'Lato', sans-serif;
     font-size: 15px;
-    background: whitesmoke;
+    background: gainsboro;
 }
 
 .body-temi{
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url("img/bg/bg-m.webp");
+    background-size: cover;
+}
+
+.contenitore{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(img/bg/bg-grey.webp);
     padding: 5%;
 }
 
@@ -86,9 +90,10 @@ em {
 
 /* Logo */
 .logo{
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     padding: 10px;
+    border-radius: 1rem;
 }
 .img-logo{
     width: 60px;
@@ -97,7 +102,7 @@ em {
 /* ! Homepage */
 .home{
     position: relative;
-    height: 100vh;
+    height: 119vh;
     display: flex; width: 100%;align-items: center;
     background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bgvideo.jpg') no-repeat bottom bottom;
     background-size: cover;
@@ -144,11 +149,45 @@ em {
     }
 }
 
+/*Divider*/
+.rowDiv{
+    width:100%;
+    padding:0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position:relative;
+    z-index: 2;
+}
+  
+    /* -- SVG CSS -- */
+  
+.svg-separator{
+    display: block;
+    background: 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    -webkit-transform: translateY(-100%) translateY(2px);
+    transform: translateY(-100%) translateY(2px);
+    width: 100%;
+}
+.svg-separator.bottom{
+    top: auto;
+    bottom: 0;
+}
+
+
 /*Container Section*/
+#text{
+    display: none;
+}
+
 #containerSection{
     margin: 0 auto;
-    background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0, 1)), url('img/bg/bg-section.webp') no-repeat center center;
-    background-size: cover;
     padding: 5%;
 }
 
@@ -175,20 +214,23 @@ em {
 }
 
 .card-image{
-    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-montagne.webp') no-repeat center center;
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-montagne.webp');
+    background-position: center;
     background-size: cover;
     border-radius: 0.75rem;
 }
 
 .card-segale{
-    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-segale.webp') no-repeat bottom bottom;
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-segale.webp');
+    background-position: center;
     background-size: cover;
     border-radius: 0.75rem;
 }
 
 .card-lana{
-    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-lana.webp') no-repeat center center;
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url('img/bg/bg-lana.webp');
     background-size: cover;
+    background-position: center;
     border-radius: 0.75rem;
 }
 
@@ -230,7 +272,7 @@ em {
 }
 
 .video-temi{
-    width: 50% !important;
+    width: 75% !important;
     border-radius: 1rem;
     margin: 5%;
 }
@@ -249,6 +291,11 @@ em {
     border: solid 1px;
     padding: 2%;
 }
+
+.card-temi .row{
+    flex-direction: row;
+}
+
 
 .card-temi .col-md-4{
     align-self: center;
@@ -270,10 +317,31 @@ em {
     }
 }
 
+/* ! Footer */
+.footer{
+    background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,.9));
+    text-align: center;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.col p{
+    padding: 25px;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none !important;
+}
+
 /*Default*/
 .white-text{
     color: white !important;
 }
+.text-white{
+    color: white !important;
+}
+
 
 /*Padding per evitare problemi di sovrapposizione*/
 *,
@@ -283,3 +351,157 @@ em {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+
+/*
+DA inserire nel HTML
+<div class="card-temi">
+            <div class="card mb-3 hover-shadow">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Zappa</h5>
+                        <p class="card-text">
+                            Questa non è una zappa.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 3 centuries ago</small>
+                        </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="carouselMaterialStyleZappa" class="carosello-temi carousel slide carousel-fade img-fluid rounded-start carousel-dark" data-mdb-ride="carousel">
+                            <!-- Inner -->
+                            <div class="carousel-inner rounded-5 shadow-4-strong">
+                                <!-- Single item -->
+                                <div class="carousel-item active">
+                                    <img src="img/segale/zappa/zappa1.jpg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <img src="img/segale/zappa/zappa2.jpg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+    
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <img src="img/segale/zappa/zappa3.jpg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+                                <!-- Inner -->
+    
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMaterialStyleZappa" data-mdb-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-mdb-target="#carouselMaterialStyleZappa" data-mdb-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-temi">
+            <div class="card mb-3 hover-shadow">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <div id="carouselMaterialStyleGerlo" class="carosello-temi carousel slide carousel-fade img-fluid rounded-start carousel-dark" data-mdb-ride="carousel">
+                            <!-- Inner -->
+                            <div class="carousel-inner rounded-5 shadow-4-strong">
+                                <!-- Single item -->
+                                <div class="carousel-item active">
+                                    <img src="img/segale/gerlo/gerlo1.jpeg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <img src="img/segale/gerlo/gerlo2.jpeg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+    
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <img src="img/segale/gerlo/gerlo3.jpeg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+                                <!-- Inner -->
+    
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMaterialStyleGerlo" data-mdb-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-mdb-target="#carouselMaterialStyleGerlo" data-mdb-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Gerlo</h5>
+                        <p class="card-text">
+                            Gerlo
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-temi">
+            <div class="card mb-3 hover-shadow">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Vanga</h5>
+                        <p class="card-text">
+                            Questa è una Vanga
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 3 centuries ago</small>
+                        </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="carouselMaterialStyleVanga" class="carosello-temi carousel slide carousel-fade img-fluid rounded-start carousel-dark" data-mdb-ride="carousel">
+                            <!-- Inner -->
+                            <div class="carousel-inner rounded-5 shadow-4-strong">
+                                <!-- Single item -->
+                                <div class="carousel-item active">
+                                    <img src="img/segale/vanga/vanga1.jpeg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+                                <!-- Single item -->
+                                <div class="carousel-item">
+                                    <img src="img/segale/vanga/vanga2.jpeg" class="d-block w-100"
+                                    alt="Staio" />
+                                </div>
+                                <!-- Inner -->
+    
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMaterialStyleVanga" data-mdb-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-mdb-target="#carouselMaterialStyleVanga" data-mdb-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+*/
