@@ -146,7 +146,7 @@ em {
 @media (max-width: 770px) {
     #video-home{
         bottom: 0;
-        height: 100vh;
+        height: 150vh;
     }
 }
 
