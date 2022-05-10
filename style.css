@@ -5,11 +5,15 @@ body{
     font-family: 'Lato', sans-serif;
     font-size: 15px;
     background: gainsboro;
+    font-family: 'Inter', sans-serif;
 }
 
 .body-temi{
     background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0, 0.7)), url("img/bg/bg-m.webp");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenitore{
@@ -243,6 +247,10 @@ em {
     color: #9f9f9fb8;
 }
 
+#containerSection .card-image p{
+    color: rgba(245, 245, 245, 0.897) !important;
+}
+
 @media (max-width: 770px) {
     .section-left{
         margin-top: 10%;
@@ -342,7 +350,10 @@ em {
 .text-white{
     color: white !important;
 }
-
+.text-middle{
+    margin-top: 10%;
+    color: white;
+}
 
 /*Padding per evitare problemi di sovrapposizione*/
 *,
@@ -352,157 +363,3 @@ em {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
-
-/*
-DA inserire nel HTML
-<div class="card-temi">
-            <div class="card mb-3 hover-shadow">
-                <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title">Zappa</h5>
-                        <p class="card-text">
-                            Questa non è una zappa.
-                        </p>
-                        <p class="card-text">
-                            <small class="text-muted">Last updated 3 centuries ago</small>
-                        </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div id="carouselMaterialStyleZappa" class="carosello-temi carousel slide carousel-fade img-fluid rounded-start carousel-dark" data-mdb-ride="carousel">
-                            <!-- Inner -->
-                            <div class="carousel-inner rounded-5 shadow-4-strong">
-                                <!-- Single item -->
-                                <div class="carousel-item active">
-                                    <img src="img/segale/zappa/zappa1.jpg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-                                <!-- Single item -->
-                                <div class="carousel-item">
-                                    <img src="img/segale/zappa/zappa2.jpg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-    
-                                <!-- Single item -->
-                                <div class="carousel-item">
-                                    <img src="img/segale/zappa/zappa3.jpg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-                                <!-- Inner -->
-    
-                                <!-- Controls -->
-                                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMaterialStyleZappa" data-mdb-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-mdb-target="#carouselMaterialStyleZappa" data-mdb-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-temi">
-            <div class="card mb-3 hover-shadow">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <div id="carouselMaterialStyleGerlo" class="carosello-temi carousel slide carousel-fade img-fluid rounded-start carousel-dark" data-mdb-ride="carousel">
-                            <!-- Inner -->
-                            <div class="carousel-inner rounded-5 shadow-4-strong">
-                                <!-- Single item -->
-                                <div class="carousel-item active">
-                                    <img src="img/segale/gerlo/gerlo1.jpeg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-                                <!-- Single item -->
-                                <div class="carousel-item">
-                                    <img src="img/segale/gerlo/gerlo2.jpeg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-    
-                                <!-- Single item -->
-                                <div class="carousel-item">
-                                    <img src="img/segale/gerlo/gerlo3.jpeg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-                                <!-- Inner -->
-    
-                                <!-- Controls -->
-                                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMaterialStyleGerlo" data-mdb-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-mdb-target="#carouselMaterialStyleGerlo" data-mdb-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title">Gerlo</h5>
-                        <p class="card-text">
-                            Gerlo
-                        </p>
-                        <p class="card-text">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-temi">
-            <div class="card mb-3 hover-shadow">
-                <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title">Vanga</h5>
-                        <p class="card-text">
-                            Questa è una Vanga
-                        </p>
-                        <p class="card-text">
-                            <small class="text-muted">Last updated 3 centuries ago</small>
-                        </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div id="carouselMaterialStyleVanga" class="carosello-temi carousel slide carousel-fade img-fluid rounded-start carousel-dark" data-mdb-ride="carousel">
-                            <!-- Inner -->
-                            <div class="carousel-inner rounded-5 shadow-4-strong">
-                                <!-- Single item -->
-                                <div class="carousel-item active">
-                                    <img src="img/segale/vanga/vanga1.jpeg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-                                <!-- Single item -->
-                                <div class="carousel-item">
-                                    <img src="img/segale/vanga/vanga2.jpeg" class="d-block w-100"
-                                    alt="Staio" />
-                                </div>
-                                <!-- Inner -->
-    
-                                <!-- Controls -->
-                                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMaterialStyleVanga" data-mdb-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-mdb-target="#carouselMaterialStyleVanga" data-mdb-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-*/

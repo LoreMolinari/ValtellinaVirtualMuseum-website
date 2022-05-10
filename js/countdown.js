@@ -11,7 +11,7 @@
           const now = new Date().getTime(),
                 distance = countDown - now;
   
-            document.getElementById("days").innerText = Math.floor(distance / (day));
+            document.getElementById("days").innerText = (Math.floor(distance / (day)))+1;
   
           //do something later when date is reached
           if (distance < 0) {
